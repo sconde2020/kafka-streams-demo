@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: kafka-streams-demo
+  kafka:
+    streams:
+      application-id: word-count-app
+      bootstrap-servers: localhost:9092
+      default:
+        key-serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+        value-serde: org.apache.kafka.common.serialization.Serdes$LongSerde
+
+logging:
+  level:
+    org.apache.kafka: ERROR
+    org.springframework.kafka: ERROR
